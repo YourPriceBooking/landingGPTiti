@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import styles from "./page.module.css";
 import Image from "next/image";
-const LAUNCH_DATE_ISO = "2026-01-13";
-const LAUNCH_DATE_HUMAN = "13.01.2026";
+const LAUNCH_DATE_ISO = "2026-02-10";
+const LAUNCH_DATE_HUMAN = "10.02.2026";
 
 export const metadata: Metadata = {
-  title: "GPTiti — Premium GPT Models Without Subscriptions (Launch 13.01.2026)",
+  title: "GPTiti — Premium GPT Models Without Subscriptions (Launch 10.02.2026)",
   description:
-    "GPTiti by Your Price Booking: access premium GPT chat models with pay-as-you-go tokens that never expire. Weekly free tokens. Launching 13.01.2026.",
+    "GPTiti by Your Price Booking: access premium GPT chat models with pay-as-you-go tokens that never expire. Weekly free tokens. Launching 10.02.2026.",
   alternates: {
     canonical: "/",
   },
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "GPTiti — Premium GPT access without subscriptions",
     description:
-      "Pay-as-you-go tokens that never expire. Weekly free tokens. Launch 13.01.2026.",
+      "Pay-as-you-go tokens that never expire. Weekly free tokens. Launch 10.02.2026.",
     type: "website",
     // Якщо буде домен:
     // url: "https://gptiti.com/",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "GPTiti — Premium GPT access without subscriptions",
     description:
-      "Pay-as-you-go tokens that never expire. Weekly free tokens. Launch 13.01.2026.",
+      "Pay-as-you-go tokens that never expire. Weekly free tokens. Launch 10.02.2026.",
     images: ["/coming-soon.svg"],
   },
 };
