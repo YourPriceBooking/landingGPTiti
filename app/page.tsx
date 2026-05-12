@@ -5,7 +5,8 @@ const LAUNCH_DATE_ISO = "2026-02-10";
 const LAUNCH_DATE_HUMAN = "10.02.2026";
 
 export const metadata: Metadata = {
-  title: "GPTiti — Premium GPT Models Without Subscriptions (Launch 10.02.2026)",
+  title:
+    "GPTiti — Premium GPT Models Without Subscriptions (Launch 10.02.2026)",
   description:
     "GPTiti by Your Price Booking: access premium GPT chat models with pay-as-you-go tokens that never expire. Weekly free tokens. Launching 10.02.2026.",
   alternates: {
@@ -16,9 +17,8 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: "GPTiti — Premium GPT access without subscriptions",
-    description:
-      "Pay-as-you-go tokens that never expire. Weekly free tokens. Launch 10.02.2026.",
+    title: "GPTiti",
+    description: "Pay-as-you-go. Launch 10.02.2026.",
     type: "website",
     // Якщо буде домен:
     // url: "https://gptiti.com/",
@@ -66,8 +66,8 @@ export default function Page() {
           </h1>
 
           <p className={styles.lead}>
-            Pay-as-you-go tokens. No monthly fees. Tokens never expire — use them
-            whenever you want.
+            Pay-as-you-go tokens. No monthly fees. Tokens never expire — use
+            them whenever you want.
           </p>
 
           <div className={styles.metaRow}>
@@ -99,9 +99,10 @@ export default function Page() {
             What is GPTiti?
           </h2>
           <p className={styles.p}>
-            GPTiti is an AI chat platform built by <strong>Your Price Booking</strong>.
-            It gives users access to premium GPT chat models through API-based
-            token usage — without subscriptions and without monthly lock-ins.
+            GPTiti is an AI chat platform built by{" "}
+            <strong>Your Price Booking</strong>. It gives users access to
+            premium GPT chat models through API-based token usage — without
+            subscriptions and without monthly lock-ins.
           </p>
         </div>
       </section>
@@ -113,14 +114,15 @@ export default function Page() {
           </h2>
           <p className={styles.p}>
             AI has become essential for millions of people worldwide — and the
-            number keeps growing. Often, standard models are enough. But sometimes
-            even everyday tasks require a premium model for a short time: a quick
-            translation, checking a thesis, reviewing a document, or solving a hard
-            problem.
+            number keeps growing. Often, standard models are enough. But
+            sometimes even everyday tasks require a premium model for a short
+            time: a quick translation, checking a thesis, reviewing a document,
+            or solving a hard problem.
           </p>
           <p className={styles.p}>
-            Instead of paying every month, GPTiti lets you purchase tokens once and
-            use them until they run out. Any remaining balance stays on your account.
+            Instead of paying every month, GPTiti lets you purchase tokens once
+            and use them until they run out. Any remaining balance stays on your
+            account.
           </p>
         </div>
       </section>
@@ -136,19 +138,22 @@ export default function Page() {
               <strong>No subscriptions:</strong> pay only for what you use.
             </li>
             <li className={styles.li}>
-              <strong>Tokens never expire:</strong> your balance stays until you spend it.
+              <strong>Tokens never expire:</strong> your balance stays until you
+              spend it.
             </li>
             <li className={styles.li}>
-              <strong>Weekly free tokens:</strong> claim a reward and try premium models.
+              <strong>Weekly free tokens:</strong> claim a reward and try
+              premium models.
             </li>
             <li className={styles.li}>
-              <strong>Premium access:</strong> advanced GPT models available even for casual users.
+              <strong>Premium access:</strong> advanced GPT models available
+              even for casual users.
             </li>
           </ul>
 
           <p className={styles.note}>
-            * We show an approximate request cost based on a typical ~30-word message.
-            Actual usage depends on how much you write.
+            * We show an approximate request cost based on a typical ~30-word
+            message. Actual usage depends on how much you write.
           </p>
         </div>
       </section>
@@ -156,8 +161,8 @@ export default function Page() {
       <footer className={styles.footer}>
         <div className={styles.containerFooter}>
           <p className={styles.footerText}>
-            © 2025 Your Price Booking. All rights reserved. “GPTiti” is a trademark of
-            Your Price Booking.
+            © 2025 Your Price Booking. All rights reserved. “GPTiti” is a
+            trademark of Your Price Booking.
           </p>
         </div>
       </footer>

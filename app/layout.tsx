@@ -17,8 +17,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "GPTiti — premium GPT models without subscriptions",
-  description: "Pay-as-you-go tokens. No monthly fees. Tokens never expire — use them whenever you want.",
+  title: "GPTiti",
+  description:
+    "Pay-as-you-go tokens. No monthly fees. Tokens never expire — use them whenever you want.",
   icons: {
     icon: "/favicon.svg",
   },
