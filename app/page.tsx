@@ -17,8 +17,9 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: "GPTiti",
-    description: "Pay-as-you-go. Launch 10.02.2026.",
+    title: "GPTiti — Premium GPT access without subscriptions",
+    description:
+      "Pay-as-you-go tokens that never expire. Weekly free tokens. Launch 10.02.2026.",
     type: "website",
     // Якщо буде домен:
     // url: "https://gptiti.com/",
