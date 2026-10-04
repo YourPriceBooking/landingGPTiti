@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import styles from "./page.module.css";
 import Image from "next/image";
-const LAUNCH_DATE_ISO = "2026-06-23";
-const LAUNCH_DATE_HUMAN = "23.06.2026";
+const LAUNCH_DATE_ISO = "2026-11-04";
+const LAUNCH_DATE_HUMAN = "04.11.2026";
 
 export const metadata: Metadata = {
   title:
-    "GPTiti — Premium GPT Models Without Subscriptions (Launch 10.02.2026)",
+    "GPTiti — Premium GPT Models Without Subscriptions (Launch 04.11.2026)",
   description:
-    "GPTiti by Your Price Booking: access premium GPT chat models with pay-as-you-go tokens that never expire. Weekly free tokens. Launching 10.02.2026.",
+    "GPTiti by Your Price Booking: access premium GPT chat models with pay-as-you-go tokens that never expire. Weekly free tokens. Launching 04.11.2026.",
   alternates: {
     canonical: "/",
   },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "GPTiti — Premium GPT access without subscriptions",
     description:
-      "Pay-as-you-go tokens that never expire. Weekly free tokens. Launch 10.02.2026.",
+      "Pay-as-you-go tokens that never expire. Weekly free tokens. Launch 04.11.2026.",
     type: "website",
     // Якщо буде домен:
     // url: "https://gptiti.com/",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "GPTiti — Premium GPT access without subscriptions",
     description:
-      "Pay-as-you-go tokens that never expire. Weekly free tokens. Launch 10.02.2026.",
+      "Pay-as-you-go tokens that never expire. Weekly free tokens. Launch 04.11.2026.",
     images: ["/coming-soon.svg"],
   },
 };
@@ -60,19 +60,6 @@ export default function Page() {
 
         {/* Real SEO text (indexed) */}
         <div className={styles.heroContent}>
-          <a
-            href="https://www.producthunt.com/products/gptiti-2?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-gptiti-2"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              className={styles.productHuntBadge}
-              alt="GPTiti - One token balance. Many AI models. | Product Hunt"
-              width={250}
-              height={54}
-              src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1164322&theme=dark&t=1780669003062"
-            />
-          </a>
           <p className={styles.kicker}>Your Price Booking presents</p>
 
           <h1 id="hero-title" className={styles.h1}>
