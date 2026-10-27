@@ -1,172 +1,72 @@
 import type { Metadata } from "next";
 import styles from "./page.module.css";
-import Image from "next/image";
-const LAUNCH_DATE_ISO = "2026-11-04";
-const LAUNCH_DATE_HUMAN = "04.11.2026";
 
 export const metadata: Metadata = {
-  title:
-    "GPTiti — Premium GPT Models Without Subscriptions (Launch 04.11.2026)",
-  description:
-    "GPTiti by Your Price Booking: access premium GPT chat models with pay-as-you-go tokens that never expire. Weekly free tokens. Launching 04.11.2026.",
-  alternates: {
-    canonical: "/",
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  title: "GPTiti — Premium AI on your terms | Launching in 2027",
+  description: "Meet GPTiti: premium AI without a monthly subscription. Work with files, explore the links you share, and pay as you go. Launching in 2027.",
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "GPTiti — Premium GPT access without subscriptions",
-    description:
-      "Pay-as-you-go tokens that never expire. Weekly free tokens. Launch 04.11.2026.",
+    title: "GPTiti — Premium AI on your terms",
+    description: "Premium AI without a monthly subscription. Launching in 2027.",
     type: "website",
-    // Якщо буде домен:
-    // url: "https://gptiti.com/",
-    images: [
-      {
-        url: "/coming-soon.svg",
-        width: 1440,
-        height: 900,
-        alt: "GPTiti Coming Soon",
-      },
-    ],
+    images: [{ url: "/social-preview.svg", width: 1200, height: 630, alt: "GPTiti — Premium AI on your terms. Launching in 2027." }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "GPTiti — Premium GPT access without subscriptions",
-    description:
-      "Pay-as-you-go tokens that never expire. Weekly free tokens. Launch 04.11.2026.",
-    images: ["/coming-soon.svg"],
+    title: "GPTiti — Premium AI on your terms",
+    description: "Premium AI without a monthly subscription. Launching in 2027.",
+    images: ["/social-preview.svg"],
   },
 };
+
+const readFormats = ["TXT", "MD", "LOG", "CSV", "TSV", "JSON", "XML", "YAML", "CODE", "DOCX", "XLSX", "PDF", "PNG", "JPG", "WEBP", "ZIP"];
+const createFormats = ["TXT", "MD", "CSV", "TSV", "JSON", "CODE", "SVG", "PDF", "DOCX", "XLSX", "ZIP"];
+
+function FormatList({ formats }: { formats: string[] }) {
+  return <ul className={styles.formats}>{formats.map((format, index) => <li key={format}><span className={`${styles.fileIcon} ${styles[`color${index % 6}`]}`} aria-hidden="true">{format === "CODE" ? "</>" : format}</span><span>{format}</span></li>)}</ul>;
+}
 
 export default function Page() {
   return (
     <main className={styles.page}>
-      {/* HERO with SVG (static) */}
       <section className={styles.hero} aria-labelledby="hero-title">
-        <div className={styles.heroMedia} aria-hidden="true">
-          <Image
-            src="/coming-soon.svg"
-            alt=""
-            className={styles.heroImg}
-            loading="eager"
-            width={1440}
-            height={900}
-          />
-          <div className={styles.heroOverlay} />
+        <div className={styles.heroCopy}>
+          <p className={styles.brand}>GPT<span>iti</span><small> by Your Price Booking</small></p>
+          <h1 id="hero-title">Premium AI.<br /><em>On your terms.</em></h1>
+          <p className={styles.lead}>Powerful GPT models, no monthly subscription. Pay as you go and use your tokens when you need them.</p>
+          <p className={styles.launch}>Launching in 2027 <span aria-hidden="true">↗</span></p>
+          <p className={styles.hint}>Good things are worth getting ready for.</p>
+          <div className={styles.heroDoodle} aria-hidden="true"><span>✦</span><span>Good ideas<br />welcome.</span><span>✳</span></div>
         </div>
-
-        {/* Real SEO text (indexed) */}
-        <div className={styles.heroContent}>
-          <p className={styles.kicker}>Your Price Booking presents</p>
-
-          <h1 id="hero-title" className={styles.h1}>
-            GPTiti — premium GPT models without subscriptions
-          </h1>
-
-          <p className={styles.lead}>
-            Pay-as-you-go tokens. No monthly fees. Tokens never expire — use
-            them whenever you want.
-          </p>
-
-          <div className={styles.metaRow}>
-            <div className={styles.metaCard}>
-              <p className={styles.metaLabel}>Launch date</p>
-              <p className={styles.metaValue}>{LAUNCH_DATE_HUMAN}</p>
-              <time dateTime={LAUNCH_DATE_ISO} className={styles.srOnly}>
-                {LAUNCH_DATE_HUMAN}
-              </time>
-            </div>
-
-            <div className={styles.metaCard}>
-              <p className={styles.metaLabel}>Weekly reward</p>
-              <p className={styles.metaValue}>Free tokens every week</p>
-            </div>
-
-            <div className={styles.metaCard}>
-              <p className={styles.metaLabel}>Pricing</p>
-              <p className={styles.metaValue}>From $4 per package</p>
-            </div>
+        <div className={styles.chat} aria-label="Illustration of a GPTiti conversation">
+          <div className={styles.chatTop}><strong>GPT<span>iti</span></strong><span>New chat</span><span aria-hidden="true">•••</span></div>
+          <div className={styles.chatBody}>
+            <div className={styles.chatUser}><div className={styles.attachment}><span>PDF</span><div><strong>Project_report.pdf</strong><small>Document · PDF</small></div></div><p>Can you summarize this report and highlight the key points?</p></div>
+            <div className={styles.chatAnswer}><div className={styles.spark}>✦</div><div><strong>Here’s a quick summary.</strong><p>I’ve pulled out the main points from your document so you can get straight to what matters.</p><div className={styles.answerLines} aria-hidden="true"><i /><i /><i /></div></div></div>
           </div>
+          <div className={styles.chatInput}><span aria-hidden="true">＋</span> Ask anything... <b aria-hidden="true">↑</b></div>
         </div>
       </section>
 
-      {/* SEO sections */}
-      <section className={styles.section} aria-labelledby="what-is">
-        <div className={styles.container}>
-          <h2 id="what-is" className={styles.h2}>
-            What is GPTiti?
-          </h2>
-          <p className={styles.p}>
-            GPTiti is an AI chat platform built by{" "}
-            <strong>Your Price Booking</strong>. It gives users access to
-            premium GPT chat models through API-based token usage — without
-            subscriptions and without monthly lock-ins.
-          </p>
-        </div>
+      <section className={styles.cards} aria-label="What GPTiti can do">
+        <article className={styles.card}><span className={`${styles.featureIcon} ${styles.red}`}>▤</span><h2>Your files, understood</h2><p>Bring documents, spreadsheets, images and more. Get summaries, answers and insights from the files you share.</p></article>
+        <article className={styles.card}><span className={`${styles.featureIcon} ${styles.blue}`}>✎</span><h2>Create files in a chat</h2><p>Ask for documents, spreadsheets, text files and more. Your result is ready to preview or download.</p></article>
+        <article className={styles.card}><span className={`${styles.featureIcon} ${styles.green}`}>◎</span><h2>Read links you share</h2><p>Share a URL and explore its content with GPTiti, with web sources saved for your conversation.</p></article>
       </section>
 
-      <section className={styles.section} aria-labelledby="why">
-        <div className={styles.container}>
-          <h2 id="why" className={styles.h2}>
-            Why we built it
-          </h2>
-          <p className={styles.p}>
-            AI has become essential for millions of people worldwide — and the
-            number keeps growing. Often, standard models are enough. But
-            sometimes even everyday tasks require a premium model for a short
-            time: a quick translation, checking a thesis, reviewing a document,
-            or solving a hard problem.
-          </p>
-          <p className={styles.p}>
-            Instead of paying every month, GPTiti lets you purchase tokens once
-            and use them until they run out. Any remaining balance stays on your
-            account.
-          </p>
+      <section className={styles.fileSection} aria-labelledby="file-title">
+        <div className={styles.sectionHeading}><p className={styles.eyebrow}>A LITTLE FILE FLEXIBILITY</p><h2 id="file-title">Supported file formats</h2><p>Bring the files you already use. Ask for the ones you need.</p></div>
+        <div className={styles.fileGrid}>
+          <div className={styles.formatCard}><div className={styles.formatHeader}><span className={`${styles.featureIcon} ${styles.red}`}>↗</span><div><h3>Read</h3><p>Upload and analyze supported files.</p></div></div><FormatList formats={readFormats} /><p className={styles.detail}>Also supports JPEG and YML. Code includes HTML, CSS, JavaScript, TypeScript, Python, SQL and more. Images in ZIP files are read using OCR.</p></div>
+          <div className={styles.formatCard}><div className={styles.formatHeader}><span className={`${styles.featureIcon} ${styles.blue}`}>✎</span><div><h3>Create</h3><p>Ask for a file right in your chat.</p></div></div><FormatList formats={createFormats} /><p className={styles.detail}>Create text-based code files, static SVGs, documents, spreadsheets and ZIP archives.</p></div>
         </div>
+        <p className={styles.fileNote}>OCR can make mistakes, so check important details. Full preservation of original Office formatting, formulas and macros is not supported.</p>
       </section>
 
-      <section className={styles.section} aria-labelledby="features">
-        <div className={styles.container}>
-          <h2 id="features" className={styles.h2}>
-            Key benefits
-          </h2>
+      <section className={styles.announcement} aria-labelledby="announcement-title"><div><p className={styles.eyebrow}>✳ &nbsp; A QUICK UPDATE</p><h2 id="announcement-title">A little more time.<br /><em>A lot more GPTiti.</em></h2><p>We’re moving our launch to 2027 and keeping 2026 payment-free while we take care of the paperwork and build more useful things for you.</p></div><div className={styles.calendar} aria-hidden="true"><span>✦</span><div><i>•••</i><strong>2027</strong></div><span>✳</span></div></section>
 
-          <ul className={styles.list}>
-            <li className={styles.li}>
-              <strong>No subscriptions:</strong> pay only for what you use.
-            </li>
-            <li className={styles.li}>
-              <strong>Tokens never expire:</strong> your balance stays until you
-              spend it.
-            </li>
-            <li className={styles.li}>
-              <strong>Weekly free tokens:</strong> claim a reward and try
-              premium models.
-            </li>
-            <li className={styles.li}>
-              <strong>Premium access:</strong> advanced GPT models available
-              even for casual users.
-            </li>
-          </ul>
-
-          <p className={styles.note}>
-            * We show an approximate request cost based on a typical ~30-word
-            message. Actual usage depends on how much you write.
-          </p>
-        </div>
-      </section>
-
-      <footer className={styles.footer}>
-        <div className={styles.containerFooter}>
-          <p className={styles.footerText}>
-            © 2025 Your Price Booking. All rights reserved. “GPTiti” is a
-            trademark of Your Price Booking.
-          </p>
-        </div>
-      </footer>
+      <section className={styles.benefits} aria-label="GPTiti benefits"><div><span className={styles.benefitIcon}>⊘</span><p><strong>No subscriptions</strong><br />Use AI without a monthly fee.</p></div><div><span className={styles.benefitIcon}>∞</span><p><strong>Tokens that don’t expire</strong><br />Use your balance when you need it.</p></div><div><span className={styles.benefitIcon}>✦</span><p><strong>Weekly free tokens</strong><br />A little extra to keep exploring.</p></div></section>
+      <div className={styles.testing}><span>⚗ &nbsp; Python tools · in testing</span><p>More useful things are on the way.</p></div>
     </main>
   );
 }
